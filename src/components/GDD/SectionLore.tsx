@@ -6,6 +6,10 @@
 import React from 'react';
 import { ENTITY_DOSSIERS } from '../../data/archiveLore';
 import { Skull, User, Building2, AlertOctagon, FileCheck } from 'lucide-react';
+import archiveHallwayImg from '../../assets/images/archive_hallway_vhs_1794361857529.jpg';
+import caretakerImg from '../../assets/images/entity_caretaker_1794361857176.jpg';
+import patientImg from '../../assets/images/entity_patient_1794361857733.jpg';
+import deskImg from '../../assets/images/document_restoration_desk_1794361858533.jpg';
 
 export const SectionLore: React.FC = () => {
   return (
@@ -41,7 +45,7 @@ export const SectionLore: React.FC = () => {
         {/* Setting Concept Art Card */}
         <div className="relative rounded-xl overflow-hidden border border-zinc-800 bg-black min-h-64 shadow-xl">
           <img
-            src="/src/assets/images/archive_hallway_vhs_1794361857529.jpg"
+            src={archiveHallwayImg}
             alt="Blackwood Archive Corridor"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover opacity-85 hover:opacity-100 transition-opacity"
@@ -80,6 +84,20 @@ export const SectionLore: React.FC = () => {
             <div><strong>Shift Objective:</strong> Sort 4 Asylum Files</div>
           </div>
         </div>
+
+        {/* Desk Concept Art Thumbnail Banner */}
+        <div className="mt-4 relative rounded-lg overflow-hidden border border-zinc-800 h-44 bg-black shadow-inner">
+          <img
+            src={deskImg}
+            alt="Archivist Restoration Desk & Tape Recorder"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent p-3 flex flex-col justify-end">
+            <span className="text-[10px] font-mono-code text-amber-400">ARCHIVIST WORKSTATION · LEVEL -1</span>
+            <span className="text-xs font-medium text-zinc-200">Restoration Desk, Banker Lamp & Case Files</span>
+          </div>
+        </div>
       </div>
 
       {/* Primary Antagonists Dossiers */}
@@ -94,7 +112,7 @@ export const SectionLore: React.FC = () => {
           <div className="rounded-xl border border-zinc-800 bg-[#0f1117] overflow-hidden flex flex-col shadow-xl">
             <div className="h-56 relative bg-black">
               <img
-                src="/src/assets/images/entity_caretaker_1794361857176.jpg"
+                src={caretakerImg}
                 alt="The Caretaker Entity"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
@@ -130,7 +148,7 @@ export const SectionLore: React.FC = () => {
           <div className="rounded-xl border border-zinc-800 bg-[#0f1117] overflow-hidden flex flex-col shadow-xl">
             <div className="h-56 relative bg-black">
               <img
-                src="/src/assets/images/entity_patient_1794361857733.jpg"
+                src={patientImg}
                 alt="The Patient Entity"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
